@@ -308,10 +308,7 @@ button {
   font-size: clamp(4rem, 11vw, 10rem);
 }
 
-.hero-content h1 span,
-.lookbook-copy h2 span {
-  color: var(--red);
-}
+
 
 .hero-content > p:last-of-type {
   max-width: 22rem;
