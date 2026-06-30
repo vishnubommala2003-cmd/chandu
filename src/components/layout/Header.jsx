@@ -5,7 +5,7 @@ export default function Header({ page, cartCount, wishlistCount, theme, onNaviga
     <header className="header">
       <button className="brand" onClick={() => onNavigate("home")} aria-label="Go home">
         <span>OG</span>
-        <small>wear culture</small>
+        <small>wear the culture</small>
       </button>
 
       <nav className="nav">
