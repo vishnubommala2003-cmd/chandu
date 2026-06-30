@@ -8,13 +8,13 @@ export const navItems = [
 
 export const products = [
   {
-    "id": "1",
-    "name": "OG Graffiti Hoodie",
-    "price": "2499",
-    "type": "hoodies",
-    "color": "black",
-    "tag": "OG",
-    "image": "/images/products/og-hoodie.jpeg"
+    id: 1,
+    name: "OG Graffiti Hoodie",
+    price: 2499,
+    type: "hoodies",
+    color: "black",
+    tag: "OG",
+    image: "/images/products/oghoodie.jpeg"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ export const products = [
     type: "tees",
     color: "bone",
     tag: "DROP",
-    image: "/images/products/og-t.jpeg"
+    image: "/images/products/og t.jpeg"
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ export const products = [
     type: "caps",
     color: "black",
     tag: "OG",
-    image: "/images/products/og-cap.jpeg"
+    image: "/images/products/og cap.jpeg"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const products = [
     type: "bottoms",
     color: "stone",
     tag: "UTIL",
-    image: "/images/products/og-cargo.jpeg"
+    image: "/images/products/og cargo.jpeg"
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ export const products = [
     type: "tees",
     color: "charcoal",
     tag: "OG",
-    image: "/images/products/og-minimal-t.jpeg"
+    image: "/images/products/og minimal t.jpeg"
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ export const products = [
     type: "jackets",
     color: "red",
     tag: "198",
-    image: "/images/products/street-rule-jacket.jpeg"
+    image: "/images/products/street rule jacket.jpeg"
   }
 ];
 
@@ -102,50 +102,23 @@ export const archiveItems = [
 ];
 
 export const archiveCards = [
-  {
-    title: "Concrete Fits",
-    image: "/images/archive/concrete-fits.jpeg"
-  },
-  {
-    title: "Backprint Series",
-    image: "/images/archive/backprint-series.jpeg"
-  },
-  {
-    title: "No Rules Drop",
-    image: "/images/archive/no-rules-drop.jpeg"
-  },
-  {
-    title: "Shadow Capsule",
-    image: "/images/archive/shadow-capsule.jpeg"
-  }
+  { title: "Concrete Fits", image: "" },
+  { title: "Backprint Series", image: "" },
+  { title: "No Rules Drop", image: "" },
+  { title: "Shadow Capsule", image: "" }
 ];
 
 export const communityCards = [
-  {
-    title: "Backprint",
-    image: "/images/community/backprint.jpeg"
-  },
-  {
-    title: "Concrete",
-    image: "/images/community/concrete.jpeg"
-  },
-  {
-    title: "Cap Drop",
-    image: "/images/community/cap-drop.jpeg"
-  },
-  {
-    title: "Alley Fit",
-    image: "/images/community/alley-fit.jpeg"
-  },
-  {
-    title: "Poster Wall",
-    image: "/images/community/poster-wall.jpeg"
-  }
+  { title: "Backprint", image: "" },
+  { title: "Concrete", image: "" },
+  { title: "Cap Drop", image: "" },
+  { title: "Alley Fit", image: "" },
+  { title: "Poster Wall", image: "" }
 ];
 
 export const lookbookPoster = {
   title: "Be OG",
-  image: "/images/lookbook/poster.jpeg"
+  image: ""
 };
 
 export const pageCopy = {
@@ -153,30 +126,30 @@ export const pageCopy = {
     eyebrow: "All Products",
     title: "Shop The Street.",
     copy: "Filter drops, add pieces to cart, and build your OG rotation.",
-    image: "/images/pages/shop-hero.jpeg"
+    image: ""
   },
   collections: {
     eyebrow: "Explore",
     title: "Collections.",
     copy: "Each collection has its own attitude, fit, and street language.",
-    image: "/images/pages/collections-hero.jpeg"
+    image: ""
   },
   drops: {
     eyebrow: "Limited",
     title: "Current Drop.",
     copy: "The newest OG pieces are available in low quantity.",
-    image: "/images/pages/drops-hero.jpeg"
+    image: ""
   },
   archive: {
     eyebrow: "Past Heat",
     title: "Archive.",
     copy: "A record of the graphic stories and fits that shaped the brand.",
-    image: "/images/pages/archive-hero.jpeg"
+    image: ""
   },
   about: {
     eyebrow: "Original Gangster",
     title: "About OG.",
     copy: "OG Street Wear is made for people who do not follow trends. They set them.",
-    image: "/images/pages/about-hero.jpeg"
+    image: ""
   }
 };

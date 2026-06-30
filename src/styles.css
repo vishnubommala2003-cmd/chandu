@@ -252,6 +252,7 @@ button {
   position: absolute;
   z-index: 1;
   pointer-events: none;
+  display: none;
 }
 
 .hero-section::before {
@@ -419,14 +420,20 @@ button {
 
 .section-grid {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.34fr) 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(16rem, 24rem) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
+  overflow: hidden;
 }
 
 .section-title {
   display: grid;
   align-content: start;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  max-width: 24rem;
 }
 
 .section-title p,
@@ -444,7 +451,12 @@ button {
 .lookbook-copy h2,
 .community-section h2,
 .page-hero h1 {
-  font-size: clamp(2.7rem, 6vw, 5.4rem);
+  font-size: clamp(2.7rem, 5vw, 5.2rem);
+}
+
+.section-grid .section-title h2 {
+  font-size: clamp(2.8rem, 4.8vw, 4.8rem);
+  overflow-wrap: break-word;
 }
 
 .section-title span,
@@ -460,6 +472,8 @@ button {
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(9rem, 1fr));
+  min-width: 0;
+  overflow: hidden;
 }
 
 .collection-card {
