@@ -102,18 +102,45 @@ export const archiveItems = [
 ];
 
 export const archiveCards = [
-  { title: "Concrete Fits", image: "" },
-  { title: "Backprint Series", image: "" },
-  { title: "No Rules Drop", image: "" },
-  { title: "Shadow Capsule", image: "" }
+  {
+    title: "Concrete Fits",
+    image: ""
+  },
+  {
+    title: "Backprint Series",
+    image: ""
+  },
+  {
+    title: "No Rules Drop",
+    image: ""
+  },
+  {
+    title: "Shadow Capsule",
+    image: ""
+  }
 ];
 
 export const communityCards = [
-  { title: "Backprint", image: "" },
-  { title: "Concrete", image: "" },
-  { title: "Cap Drop", image: "" },
-  { title: "Alley Fit", image: "" },
-  { title: "Poster Wall", image: "" }
+  {
+    title: "Backprint",
+    image: ""
+  },
+  {
+    title: "Concrete",
+    image: ""
+  },
+  {
+    title: "Cap Drop",
+    image: ""
+  },
+  {
+    title: "Alley Fit",
+    image: ""
+  },
+  {
+    title: "Poster Wall",
+    image: ""
+  }
 ];
 
 export const lookbookPoster = {
