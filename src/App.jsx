@@ -16,8 +16,6 @@ export default function App() {
   const [wishlist, setWishlist] = useState([]);
   const [toast, setToast] = useState("");
 
-  const cartTotal = useMemo(() => cart.reduce((sum, item) => sum + item.price, 0), [cart]);
-
   const navigate = (nextPage) => {
     setPage(nextPage);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -36,10 +34,6 @@ export default function App() {
     });
   };
 
-  const goToCart = () => {
-    setToast(`Cart: ${cart.length} item(s), Rs ${cartTotal.toLocaleString("en-IN")}.`);
-  };
-
   return (
     <main className={`app ${theme}`}>
       {showSplash && <SplashScreen duration={INTRO_TIME} onFinish={() => setShowSplash(false)} />}
@@ -53,7 +47,6 @@ export default function App() {
             theme={theme}
             onNavigate={navigate}
             onThemeToggle={() => setTheme(theme === "light" ? "dark" : "light")}
-            onCartClick={goToCart}
           />
 
           {page === "home" ? (
@@ -69,6 +62,7 @@ export default function App() {
             <RoutePage
               page={page}
               products={products}
+              cart={cart}
               wishlist={wishlist}
               onNavigate={navigate}
               onAddToCart={addToCart}

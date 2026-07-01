@@ -289,6 +289,74 @@ button {
   color: #f4efe6;
 }
 
+.search-drop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 0 1.5rem 1.5rem;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: height 0.35s ease, opacity 0.35s ease, visibility 0.35s ease;
+  background: rgba(16, 16, 16, 0.95);
+}
+
+.search-drop.open {
+  height: 5.2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-bar {
+  margin: 0 auto;
+  max-width: 50rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(244, 239, 230, 0.18);
+  background: rgba(244, 239, 230, 0.04);
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(244, 239, 230, 0.18);
+  background: rgba(16, 16, 16, 0.88);
+  color: #f4efe6;
+}
+
+.search-bar input::placeholder {
+  color: rgba(244, 239, 230, 0.6);
+}
+
+.search-bar button {
+  min-height: 2.8rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(244, 239, 230, 0.18);
+  background: rgba(244, 239, 230, 0.08);
+  color: #f4efe6;
+  font-weight: 900;
+}
+
+.search-drop.open .search-bar {
+  animation: rollDown 0.35s ease;
+}
+
+@keyframes rollDown {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -557,29 +625,52 @@ button {
 
 .collection-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(9rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   min-width: 0;
-  gap: 0.85rem;
+  gap: 1.5rem;
 }
 
 .collection-card {
-  min-height: 22rem;
+  min-height: 30rem;
   display: grid;
   align-content: end;
-  gap: 0.7rem;
-  padding: 1.1rem;
-  border: 1px solid var(--line);
-  background:
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78)),
-    repeating-linear-gradient(115deg, #544d43 0 1.3rem, #26231f 1.3rem 2.6rem);
+  gap: 0.9rem;
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
   text-align: left;
   transform: none;
-  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
+  overflow: hidden;
+  position: relative;
+  background: rgba(16, 16, 16, 0.22);
+  border-radius: 1.8rem;
+  box-shadow: 0 1.6rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.collection-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 1.8rem;
+  z-index: 0;
+}
+
+.collection-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78));
+  border-radius: 1.8rem;
+  z-index: 1;
 }
 
 .collection-card > * {
   transform: none;
+  position: relative;
+  z-index: 2;
 }
 
 .collection-card h3 {
@@ -631,13 +722,20 @@ button {
   position: relative;
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--paper) 88%, transparent);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-0.3rem) scale(1.02);
+  box-shadow: 0 1.5rem 3rem rgba(16, 16, 16, 0.18);
 }
 
 .wishlist-btn {
   position: absolute;
   top: 0.7rem;
   left: 0.7rem;
-  z-index: 2;
+  z-index: 3;
   width: 2rem;
   height: 2rem;
   border: 0;
@@ -647,12 +745,35 @@ button {
 }
 
 .product-art {
+  position: relative;
   min-height: 17rem;
   display: grid;
   place-items: center;
   background: #111;
   color: #f4efe6;
   overflow: hidden;
+}
+
+.product-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.product-art span {
+  position: relative;
+  z-index: 1;
+}
+
+.product-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.75));
+  z-index: 0;
 }
 
 .product-art.bone {
@@ -694,6 +815,79 @@ button {
   justify-content: space-between;
   gap: 0.8rem;
   padding: 0.85rem;
+}
+
+.product-hover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.4rem;
+  gap: 0.85rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.product-card:hover .product-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-hover h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.product-hover p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.product-tag,
+.product-meta,
+.product-price {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.product-tag {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: var(--red);
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.product-actions button {
+  min-width: 8rem;
+  padding: 0.85rem 1rem;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.product-actions .hover-wishlist {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.product-actions button:not(.hover-wishlist) {
+  background: var(--red);
+  color: #fff;
 }
 
 .product-info h3,
@@ -800,18 +994,29 @@ button {
   gap: 0.8rem;
 }
 
-.feed-grid button,
+....feed-grid button,
 .archive-grid button {
-  min-height: 15rem;
   display: grid;
   align-content: end;
   gap: 0.5rem;
-  padding: 1rem;
-  background:
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.82)),
-    repeating-linear-gradient(120deg, #80766a 0 1.4rem, #2b2925 1.4rem 2.8rem);
+  padding: 0;
+  background: none;
   color: #fff;
   text-align: left;
+  transform: translateY(0);
+  opacity: 0;
+  animation: archiveReveal 0.55s ease forwards;
+}
+
+@keyframes archiveReveal {
+  from {
+    transform: translateY(2rem) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .feed-grid span,
@@ -883,14 +1088,192 @@ button {
 
 .archive-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 1rem;
+  width: 100%;
+}
+
+.archive-grid button {
+  min-height: 0;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 2.5rem rgba(16, 16, 16, 0.18);
+  transform: translateY(0);
+  animation: archiveReveal 0.55s ease forwards;
+}
+
+.archive-media {
+  position: relative;
+  width: 100%;
+  background: #000;
+}
+
+.archive-media img,
+.archive-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.archive-media video {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  object-fit: cover;
+}
+
+.archive-grid button:hover .archive-media video {
+  opacity: 1;
+}
+
+.archive-media img {
+  width: 100%;
+  display: block;
+}
+
+.archive-grid button:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.archive-grid button:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.archive-grid button:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.archive-grid button:nth-child(4) {
+  animation-delay: 0.32s;
 }
 
 .about-panel {
   display: grid;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(14rem, 1fr) minmax(18rem, 1.2fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-logo-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 28rem;
+  background: rgba(16, 16, 16, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+}
+
+.about-logo-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(165, 31, 28, 0.3), transparent 40%);
+  opacity: 0;
+  animation: logoGlow 2.2s ease-in-out infinite alternate;
+}
+
+.about-logo {
+  width: clamp(10rem, 25vw, 24rem);
+  height: auto;
+  z-index: 1;
+  transform: scale(0.95);
+  transition: transform 0.35s ease;
+}
+
+.about-logo-wrap:hover .about-logo {
+  transform: scale(1.05);
+}
+
+.about-copy {
+  display: grid;
   gap: 1rem;
-  max-width: 56rem;
+}
+
+.about-eyebrow,
+.route-eyebrow,
+.page-hero p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.about-copy h2 {
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 4.6rem);
+  line-height: 0.98;
+}
+
+.about-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 38rem;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.about-actions .btn {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f4efe6;
+  padding: 1rem 1.4rem;
+  text-transform: uppercase;
+}
+
+.about-actions .btn.primary {
+  background: var(--red);
+  color: #fff;
+}
+
+.about-actions .btn.outline {
+  background: transparent;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(10rem, 1fr));
+  gap: 1rem;
+}
+
+.about-highlights > div {
+  padding: 1.4rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-highlights h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.15rem;
+}
+
+.about-highlights p {
+  margin: 0;
+  color: #cfc6ba;
+  line-height: 1.6;
+}
+
+@keyframes logoGlow {
+  from {
+    opacity: 0.2;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
 }
 
 .footer {
@@ -1135,11 +1518,11 @@ button {
 
   .collection-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.2rem;
   }
 
   .collection-card {
-    min-height: 16rem;
+    min-height: 24rem;
     clip-path: none;
   }
 

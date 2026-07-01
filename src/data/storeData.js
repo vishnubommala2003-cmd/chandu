@@ -104,19 +104,23 @@ export const archiveItems = [
 export const archiveCards = [
   {
     title: "Concrete Fits",
-    image: ""
+    image: "/images/archive/concrete-fits.jpeg",
+    video: "/videos/archive/concrete-fits.mp4"
   },
   {
     title: "Backprint Series",
-    image: ""
+    image: "/images/archive/backprint-series.jpeg",
+    video: "/videos/archive/backprint-series.mp4"
   },
   {
     title: "No Rules Drop",
-    image: ""
+    image: "/images/archive/no-rules-drop.jpeg",
+    video: "/videos/archive/no-rules-drop.mp4"
   },
   {
     title: "Shadow Capsule",
-    image: ""
+    image: "/images/archive/shadow-capsule.jpeg",
+    video: "/videos/archive/shadow-capsule.mp4"
   }
 ];
 
@@ -173,6 +177,18 @@ export const pageCopy = {
     copy: "A record of the graphic stories and fits that shaped the brand.",
     image: ""
   },
+  wishlist: {
+    eyebrow: "Saved",
+    title: "Your Wishlist.",
+    copy: "These are the OG pieces you want to keep an eye on.",
+    image: ""
+  },
+  cart: {
+    eyebrow: "Bag",
+    title: "Your Cart.",
+    copy: "Review your selected products and get ready to checkout.",
+    image: ""
+  },
   about: {
     eyebrow: "Original Gangster",
     title: "About OG.",
@@ -180,3 +196,5 @@ export const pageCopy = {
     image: ""
   }
 };
+
+

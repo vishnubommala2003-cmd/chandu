@@ -7,13 +7,20 @@ export default function Header({
   wishlistCount,
   theme,
   onNavigate,
-  onThemeToggle,
-  onCartClick
+  onThemeToggle
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
 
   const handleNavigate = (nextPage) => {
     onNavigate(nextPage);
+    setMenuOpen(false);
+    setSearchOpen(false);
+  };
+
+  const handleSearchToggle = () => {
+    setSearchOpen((current) => !current);
     setMenuOpen(false);
   };
 
@@ -48,18 +55,31 @@ export default function Header({
           {theme === "light" ? "Dark" : "Light"}
         </button>
 
-        <button onClick={() => handleNavigate("shop")}>
+        <button onClick={handleSearchToggle}>
           Search
         </button>
 
-        <button onClick={() => handleNavigate("drops")}>
+        <button onClick={() => handleNavigate("wishlist")}> 
           Wish {wishlistCount}
         </button>
 
-        <button onClick={onCartClick}>
+        <button onClick={() => handleNavigate("cart")}>
           Cart {cartCount}
         </button>
+      </div>
+
+      <div className={searchOpen ? "search-drop open" : "search-drop"}>
+        <div className="search-bar">
+          <input
+            type="search"
+            placeholder="Search OG products..."
+            value={searchValue}
+            onChange={(event) => setSearchValue(event.target.value)}
+          />
+          <button onClick={() => setSearchValue("")}>Clear</button>
+        </div>
       </div>
     </header>
   );
 }
+

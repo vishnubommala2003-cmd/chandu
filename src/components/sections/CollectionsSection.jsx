@@ -20,6 +20,7 @@ export default function CollectionsSection({ onNavigate, onToast }) {
               onNavigate("collections");
             }}
           >
+            <img src={item.image} alt={item.title} />
             <span>0{item.id}</span>
             <h3>{item.title}</h3>
             <p>{item.copy}</p>
