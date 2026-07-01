@@ -8,7 +8,7 @@ export default function SplashScreen({ duration, onFinish }) {
 
   return (
     <section className="splash" aria-label="OG intro animation">
-      <div className="splash-mark">OG</div>
+      <img className="splash-logo" src="/images/brand/og-logo.png" alt="The OG" />
       <div className="splash-line" />
       <p>Street Wear</p>
     </section>

@@ -20,8 +20,7 @@ export default function Header({
   return (
     <header className="header">
       <button className="brand" onClick={() => handleNavigate("home")} aria-label="Go home">
-        <span>OG</span>
-        <small>Street Wear</small>
+        <img className="brand-logo" src="/images/brand/og-logo.png" alt="The OG" />
       </button>
 
       <button
