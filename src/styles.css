@@ -54,15 +54,15 @@ button {
   position: fixed;
   inset: 0;
   z-index: 100;
-  display: grid;
-  place-items: center;
-  align-content: center;
-  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background:
     radial-gradient(circle at 50% 45%, rgba(165, 31, 28, 0.35), transparent 20rem),
     var(--charcoal);
   color: var(--bone);
-  animation: splashExit 0.7s ease 1.75s forwards;
+  pointer-events: none;
+  animation: splashExit 0.55s ease 2.7s forwards;
 }
 
 .splash-mark {
@@ -76,11 +76,12 @@ button {
 }
 
 .splash-logo {
-  width: clamp(13rem, 34vw, 26rem);
+  width: clamp(16rem, 42vw, 34rem);
   height: auto;
   display: block;
   filter: drop-shadow(0 1rem 2rem rgba(0, 0, 0, 0.35));
-  animation: splashPop 1.2s ease both;
+  transform-origin: center;
+  animation: splashLogoSettle 2.75s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .splash-line {
@@ -123,6 +124,28 @@ button {
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+@keyframes splashLogoSettle {
+  0% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+
+  16% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+
+  62% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(calc(-50vw + clamp(4.2rem, 7vw, 6rem)), calc(-50vh + 3.2rem)) scale(0.22);
   }
 }
 .mobile-menu-btn {
@@ -482,14 +505,20 @@ button {
 
 .section-grid {
   display: grid;
-  grid-template-columns: minmax(12rem, 0.34fr) 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(16rem, 24rem) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  overflow: hidden;
 }
 
 .section-title {
   display: grid;
   align-content: start;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
+  max-width: 22rem;
+  min-width: 0;
 }
 
 .section-title p,
@@ -507,7 +536,13 @@ button {
 .lookbook-copy h2,
 .community-section h2,
 .page-hero h1 {
-  font-size: clamp(2.7rem, 6vw, 5.4rem);
+  font-size: clamp(2.7rem, 5vw, 5.2rem);
+}
+
+.section-grid .section-title h2 {
+  font-size: clamp(2rem, 2.4vw, 2.9rem);
+  line-height: 0.96;
+  max-width: 100%;
 }
 
 .section-title span,
@@ -523,6 +558,8 @@ button {
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(9rem, 1fr));
+  min-width: 0;
+  gap: 0.85rem;
 }
 
 .collection-card {
@@ -537,11 +574,12 @@ button {
     repeating-linear-gradient(115deg, #544d43 0 1.3rem, #26231f 1.3rem 2.6rem);
   color: #fff;
   text-align: left;
-  transform: skewX(-7deg);
+  transform: none;
+  clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%);
 }
 
 .collection-card > * {
-  transform: skewX(7deg);
+  transform: none;
 }
 
 .collection-card h3 {
@@ -1029,7 +1067,26 @@ button {
 
 @media (max-width: 760px) {
   .header {
+    grid-template-columns: auto auto;
+    min-height: 4.6rem;
     background: linear-gradient(180deg, rgba(16, 16, 16, 0.82), rgba(16, 16, 16, 0.18));
+  }
+
+  .brand-logo {
+    width: 5.2rem;
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+    justify-self: end;
+  }
+
+  .nav {
+    display: none;
+    grid-column: 1 / -1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
   }
 
   .nav.open {
@@ -1038,8 +1095,90 @@ button {
     border: 1px solid rgba(244, 239, 230, 0.16);
   }
 
-  .hero-section {
-    padding-top: 9rem;
+  .nav.open button {
+    min-height: 2.6rem;
+    text-align: left;
   }
+
+  .header-actions {
+    grid-column: 1 / -1;
+    justify-content: start;
+  }
+
+  .hero-section {
+    min-height: 100svh;
+    padding-top: 9.5rem;
+    align-items: start;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 12rem;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    overflow: visible;
+  }
+
+  .section-title {
+    max-width: 100%;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .collection-card {
+    min-height: 16rem;
+    clip-path: none;
+  }
+
+  .product-grid,
+  .product-grid.mini {
+    grid-template-columns: 1fr;
+  }
+
+  .splash-logo {
+    width: clamp(13rem, 78vw, 21rem);
+  }
+}
+
+@media (max-width: 760px) {
+  @keyframes splashLogoSettle {
+    0% {
+      opacity: 0;
+      transform: scale(1.45);
+    }
+
+    16% {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+
+    62% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(calc(-50vw + 3.8rem), calc(-50vh + 2.85rem)) scale(0.25);
+    }
+  }
+}
+
+
+.section-grid .section-title {
+  max-width: 22rem;
 }
 

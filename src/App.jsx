@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage.jsx";
 import RoutePage from "./pages/RoutePage.jsx";
 import { products } from "./data/storeData.js";
 
-const INTRO_TIME = 2400;
+const INTRO_TIME = 3200;
 
 export default function App() {
   const [theme, setTheme] = useState("light");
