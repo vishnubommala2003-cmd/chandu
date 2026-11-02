@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd Desktop/chandu && npm install && npm run build",
+  "outputDirectory": "Desktop/chandu/dist"
+}

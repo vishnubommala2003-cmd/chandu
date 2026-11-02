@@ -994,7 +994,7 @@ button {
   gap: 0.8rem;
 }
 
-....feed-grid button,
+.feed-grid button,
 .archive-grid button {
   display: grid;
   align-content: end;
