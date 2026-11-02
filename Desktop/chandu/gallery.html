@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Viseshta Group Commercial & Residential Developments</title>
+  <meta name="description" content="View architectural renderings, construction updates, and site photography across Viseshta Group's projects in Hyderabad." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Header (Logo Only - No Text Beside Logo) -->
+  <header class="sticky top-0 z-40 px-4 sm:px-8 lg:px-12 py-3.5 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <div class="bg-white p-1 rounded-xl flex items-center hover:scale-105 transition-transform">
+          <img src="logo.png" alt="Viseshta Group" class="h-9 sm:h-10 w-auto object-contain" />
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs tracking-wider uppercase text-slate-700 font-medium">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Home</a>
+        <a href="about.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">About Us</a>
+        <a href="projects.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Projects</a>
+        <a href="invesmart.html" class="px-3.5 py-1.5 rounded-full text-blue-600 hover:text-blue-800 hover:bg-blue-50 transition font-semibold">Invesmart ★</a>
+        <a href="nri-desk.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition font-medium">NRI Desk 🌐</a>
+        <a href="gallery.html" class="px-3.5 py-1.5 rounded-full text-blue-700 bg-white shadow-xs font-semibold">Gallery</a>
+        <a href="blog.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Blogs</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Contact Us</a>
+      </nav>
+
+      <div>
+        <a href="index.html#breakdown-form-section" class="px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-white bg-blue-600 hover:bg-blue-700 transition shadow-md shadow-blue-500/25">
+          Get Breakdown
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION: HERO SECTION (5-IMAGE 5s SLIDESHOW & PERFECT ZERO-SCROLL POSITIONING) -->
+  <section id="hero" class="relative h-[calc(100vh-80px)] min-h-[580px] max-h-[820px] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-8 lg:px-12 py-3 sm:py-5">
+    
+    <!-- 5-Image Slideshow Background (Changes Every 5 Seconds with Smooth Ken Burns Zoom) -->
+    <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <!-- Image 1 -->
+      <div class="hero-bg-slide active" data-slide="0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85" 
+          alt="Invesmart Tower Glass Curtain Façade" 
+          class="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 2 -->
+      <div class="hero-bg-slide" data-slide="1">
+        <img 
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=85" 
+          alt="Double-Height Grade-A Corporate Lobby" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 3 -->
+      <div class="hero-bg-slide" data-slide="2">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85" 
+          alt="Palm Valley Luxury Villa Enclave Landscaping" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 4 -->
+      <div class="hero-bg-slide" data-slide="3">
+        <img 
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85" 
+          alt="Teak Village Organic Farmland & Nature Trails" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 5 -->
+      <div class="hero-bg-slide" data-slide="4">
+        <img 
+          src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1920&q=85" 
+          alt="Commercial Architectural Illumination at Dusk" 
+          class="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.1]"
+        />
+      </div>
+
+      <!-- Rich Blue & Navy Gradient Atmosphere for Crisp Text Readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0b1e3b]/75 to-[#081528]/85"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.28)_0%,transparent_75%)]"></div>
+    </div>
+
+    <!-- Main Hero Text Content (Upward Forward Animated, Perfectly Positioned Without Scroll) -->
+    <div class="max-w-5xl mx-auto w-full text-center relative z-10 flex flex-col items-center justify-center my-auto">
+      
+      <!-- Micro Badge (Moves up forward) -->
+      <div class="animate-hero-up-1 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 backdrop-blur-md border border-blue-400/40 text-blue-300 text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold mb-2.5 sm:mb-3 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>ARCHITECTURAL SHOWCASE · VERIFIED ON-GROUND ASSETS</span>
+      </div>
+
+      <!-- Main Headline (Moves up forward, calibrated size for 100% viewport fit without scroll) -->
+      <h1 class="animate-hero-up-2 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-white leading-[1.08] sm:leading-[1.12] tracking-tight mb-2 sm:mb-3 drop-shadow-md">
+        Visual Project Gallery.<br>
+        <span class="italic font-light text-slate-100">Elevations, Master Plans & On-Site Progress.</span>
+      </h1>
+
+      <!-- Subheadline (Moves up forward) -->
+      <p class="animate-hero-up-3 text-sm sm:text-base md:text-lg lg:text-xl text-blue-100/90 max-w-xl mx-auto font-light leading-snug mb-4 sm:mb-5">
+        Explore architectural renderings, drone layouts, and interior concepts across Viseshta Group's signature developments.
+      </p>
+
+      <!-- Primary Action CTA & Quick Connect (Moves up forward) -->
+      <div class="animate-hero-up-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-5 w-full">
+        <a href="#gallery-section" class="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-xs tracking-wider uppercase font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-[0_8px_25px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5 cursor-pointer">
+          <span>Explore Photo Gallery ↓</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
+
+        <a href="invesmart.html" class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-xs tracking-wider uppercase font-medium text-white border border-white/30 hover:border-blue-400 hover:bg-white/10 transition-all">
+          Invesmart Specifications
+        </a>
+      </div>
+
+      <!-- 4 Key Numbers Micro-Bar (Quick facts visible immediately without scroll) -->
+      <div class="animate-hero-up-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 text-[11px] sm:text-xs text-slate-200">
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">Invesmart</span> Commercial
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-emerald-400 font-bold">Palm Valley</span> Villa Enclave
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">Teak Village</span> Farmland
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">High-Res</span> 4K Media
+        </div>
+      </div>
+
+      <!-- Slide Indicator & 5s Timer Progress Bar (Moves up forward) -->
+      <div class="animate-hero-up-5 flex flex-col items-center gap-2 w-full max-w-md pt-1">
+        <!-- Live Slide Caption -->
+        <div id="hero-slide-caption" class="text-[10px] sm:text-[11px] tracking-wider uppercase text-blue-300 font-semibold hero-caption-animate flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+          <span id="caption-text">View 01 of 05 · Invesmart Tower Glass Curtain Façade</span>
+        </div>
+
+        <!-- 5 Interactive 5s Progress Indicators -->
+        <div class="flex items-center gap-2 w-full justify-center">
+          <button onclick="changeHeroSlide(0)" class="slide-indicator-bar w-12 sm:w-16 active cursor-pointer group" aria-label="Slide 1">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(1)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 2">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(2)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 3">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(3)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 4">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(4)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 5">
+            <span class="slide-indicator-progress"></span>
+          </button>
+        </div>
+
+        <!-- Micro Subtitle -->
+        <p class="text-[10px] sm:text-[11px] text-blue-200/60 max-w-xl mx-auto font-light leading-tight text-center pt-1">
+          Actual on-site photography, architectural elevation drawings, and master layout plans.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Filterable Gallery Section -->
+  <section class="py-12 bg-white" id="gallery-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="flex flex-wrap items-center justify-center gap-2 pb-10">
+        <button onclick="filterGallery('all', this)" class="gallery-tab active px-5 py-2 rounded-full text-xs uppercase tracking-wider font-bold border border-blue-600 bg-blue-600 text-white transition cursor-pointer shadow-xs">All Media</button>
+        <button onclick="filterGallery('invesmart', this)" class="gallery-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Invesmart Commercial</button>
+        <button onclick="filterGallery('palm', this)" class="gallery-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Palm Valley</button>
+        <button onclick="filterGallery('teak', this)" class="gallery-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Teak Village</button>
+      </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+        
+        <div class="gallery-item invesmart rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="Invesmart Commercial Facade" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Invesmart Tower</span>
+            <h4 class="text-base font-serif text-white font-bold">Glass Curtain Wall Façade</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item invesmart rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" alt="Grade-A Lobby" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Invesmart Tower</span>
+            <h4 class="text-base font-serif text-white font-bold">Double-Height Executive Lobby</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item invesmart rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&q=80" alt="Workspace Floor Plate" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Invesmart Tower</span>
+            <h4 class="text-base font-serif text-white font-bold">Modular IT Workspace Layout</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item palm rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Palm Valley Clubhouse" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Palm Valley</span>
+            <h4 class="text-base font-serif text-white font-bold">Villa Layout & Club Amenities</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item teak rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80" alt="Teak Village Plantation" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Teak Village</span>
+            <h4 class="text-base font-serif text-white font-bold">Managed Teakwood Agro Estate</h4>
+          </div>
+        </div>
+
+        <div class="gallery-item invesmart rounded-2xl overflow-hidden border border-slate-200 relative group h-72 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80" alt="Invesmart Night Elevation" class="w-full h-full object-cover img-scale" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex flex-col justify-end p-5">
+            <span class="text-[10px] text-blue-300 uppercase font-bold tracking-wider">Invesmart Tower</span>
+            <h4 class="text-base font-serif text-white font-bold">Architectural Elevation at Dusk</h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-[#0f172a] text-center text-xs text-slate-400 border-t border-slate-800">
+    <p>© 2026 Viseshta Group. Founded 2018. Hyderabad, Telangana.</p>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="tel:+919100024000" class="floating-btn bg-blue-600 text-white" title="Call"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></a>
+    <a href="https://wa.me/919100024000" target="_blank" rel="noreferrer" class="floating-btn bg-emerald-500 text-white" title="WhatsApp"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 012.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.43 1.02 2.6.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg></a>
+  </div>
+
+  <script>
+    function filterGallery(category, btn) {
+      document.querySelectorAll('.gallery-tab').forEach(t => {
+        t.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+        t.classList.add('bg-white', 'text-slate-700', 'border-slate-300');
+      });
+      btn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-300');
+
+      document.querySelectorAll('.gallery-item').forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // 5-Image Slideshow (Every 5 Seconds)
+    const heroSlides = document.querySelectorAll('.hero-bg-slide');
+    const indicatorBars = document.querySelectorAll('.slide-indicator-bar');
+    const captionEl = document.getElementById('caption-text');
+    const heroCaptions = [
+      "View 01 of 05 · Invesmart Tower Glass Curtain Façade",
+      "View 02 of 05 · Double-Height Grade-A Corporate Lobby",
+      "View 03 of 05 · Palm Valley Luxury Villa Enclave Landscaping",
+      "View 04 of 05 · Teak Village Organic Farmland & Nature Trails",
+      "View 05 of 05 · Commercial Architectural Illumination at Dusk"
+    ];
+
+    let currentHeroSlide = 0;
+    let heroSlideInterval = null;
+
+    function showHeroSlide(index) {
+      if (!heroSlides.length) return;
+      currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
+      
+      heroSlides.forEach((slide, i) => {
+        if (i === currentHeroSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      indicatorBars.forEach((bar, i) => {
+        if (i === currentHeroSlide) {
+          bar.classList.add('active');
+        } else {
+          bar.classList.remove('active');
+        }
+      });
+
+      if (captionEl) {
+        const captionWrapper = document.getElementById('hero-slide-caption');
+        if (captionWrapper) {
+          captionWrapper.classList.remove('hero-caption-animate');
+          void captionWrapper.offsetWidth;
+          captionWrapper.classList.add('hero-caption-animate');
+        }
+        captionEl.textContent = heroCaptions[currentHeroSlide];
+      }
+    }
+
+    function startHeroSlideshow() {
+      if (heroSlideInterval) clearInterval(heroSlideInterval);
+      heroSlideInterval = setInterval(() => {
+        showHeroSlide(currentHeroSlide + 1);
+      }, 5000);
+    }
+
+    function changeHeroSlide(index) {
+      showHeroSlide(index);
+      startHeroSlideshow();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showHeroSlide(0);
+      startHeroSlideshow();
+    });
+  </script>
+  <script src="animations.js"></script>
+</body>
+</html>

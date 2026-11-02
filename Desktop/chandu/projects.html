@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects Portfolio | Viseshta Group Hyderabad</title>
+  <meta name="description" content="Explore Viseshta Group's signature developments: Invesmart Commercial IT Spaces, Palm Valley Villa Plots, Teak Village Managed Farmland, and Vistara Valley." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Header (Logo Only - No Text Beside Logo) -->
+  <header class="sticky top-0 z-40 px-4 sm:px-8 lg:px-12 py-3.5 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <div class="bg-white p-1 rounded-xl flex items-center hover:scale-105 transition-transform">
+          <img src="logo.png" alt="Viseshta Group" class="h-9 sm:h-10 w-auto object-contain" />
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs tracking-wider uppercase text-slate-700 font-medium">
+        <a href="index.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Home</a>
+        <a href="about.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">About Us</a>
+        <a href="projects.html" class="px-3.5 py-1.5 rounded-full text-blue-700 bg-white shadow-xs font-semibold">Projects</a>
+        <a href="invesmart.html" class="px-3.5 py-1.5 rounded-full text-blue-600 hover:text-blue-800 hover:bg-blue-50 transition font-semibold">Invesmart ★</a>
+        <a href="nri-desk.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition font-medium">NRI Desk 🌐</a>
+        <a href="gallery.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Gallery</a>
+        <a href="blog.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Blogs</a>
+        <a href="contact.html" class="px-3.5 py-1.5 rounded-full hover:text-blue-600 hover:bg-white transition">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="index.html#breakdown-form-section" class="px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold text-white bg-blue-600 hover:bg-blue-700 transition shadow-md shadow-blue-500/25">
+          Get Breakdown
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION: HERO SECTION (5-IMAGE 5s SLIDESHOW & PERFECT ZERO-SCROLL POSITIONING) -->
+  <section id="hero" class="relative h-[calc(100vh-80px)] min-h-[580px] max-h-[820px] flex flex-col justify-center items-center overflow-hidden px-4 sm:px-8 lg:px-12 py-3 sm:py-5">
+    
+    <!-- 5-Image Slideshow Background (Changes Every 5 Seconds with Smooth Ken Burns Zoom) -->
+    <div class="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      <!-- Image 1 -->
+      <div class="hero-bg-slide active" data-slide="0">
+        <img 
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85" 
+          alt="Invesmart Commercial IT Tower · Financial District" 
+          class="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 2 -->
+      <div class="hero-bg-slide" data-slide="1">
+        <img 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85" 
+          alt="Palm Valley · Luxury Plotted Community" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 3 -->
+      <div class="hero-bg-slide" data-slide="2">
+        <img 
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=85" 
+          alt="Teak Village · Managed Agro Farmland Retreat" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 4 -->
+      <div class="hero-bg-slide" data-slide="3">
+        <img 
+          src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=85" 
+          alt="Vistara Valley · High-Growth Highway Plotted Layout" 
+          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.1]"
+        />
+      </div>
+      <!-- Image 5 -->
+      <div class="hero-bg-slide" data-slide="4">
+        <img 
+          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1920&q=85" 
+          alt="Grade-A Pre-Leased Commercial Floor Plates" 
+          class="w-full h-full object-cover object-center filter brightness-[0.40] contrast-[1.1]"
+        />
+      </div>
+
+      <!-- Rich Blue & Navy Gradient Atmosphere for Crisp Text Readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0b1e3b]/75 to-[#081528]/85"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.28)_0%,transparent_75%)]"></div>
+    </div>
+
+    <!-- Main Hero Text Content (Upward Forward Animated, Perfectly Positioned Without Scroll) -->
+    <div class="max-w-5xl mx-auto w-full text-center relative z-10 flex flex-col items-center justify-center my-auto">
+      
+      <!-- Micro Badge (Moves up forward) -->
+      <div class="animate-hero-up-1 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 backdrop-blur-md border border-blue-400/40 text-blue-300 text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold mb-2.5 sm:mb-3 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>VISESHTA GROUP PORTFOLIO · HYDERABAD & BEYOND</span>
+      </div>
+
+      <!-- Main Headline (Moves up forward, calibrated size for 100% viewport fit without scroll) -->
+      <h1 class="animate-hero-up-2 text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-white leading-[1.08] sm:leading-[1.12] tracking-tight mb-2 sm:mb-3 drop-shadow-md">
+        Signature Developments.<br>
+        <span class="italic font-light text-slate-100">Commercial, Residential & Farmland.</span>
+      </h1>
+
+      <!-- Subheadline (Moves up forward) -->
+      <p class="animate-hero-up-3 text-sm sm:text-base md:text-lg lg:text-xl text-blue-100/90 max-w-xl mx-auto font-light leading-snug mb-4 sm:mb-5">
+        From Grade-A IT workspace towers to secure gated villa plots and curated agro retreats.
+      </p>
+
+      <!-- Primary Action CTA & Quick Connect (Moves up forward) -->
+      <div class="animate-hero-up-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-5 w-full">
+        <a href="invesmart.html" class="inline-flex items-center justify-center gap-2.5 px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-xs tracking-wider uppercase font-bold text-white bg-blue-600 hover:bg-blue-500 shadow-[0_8px_25px_rgba(37,99,235,0.4)] transition-all transform hover:-translate-y-0.5 cursor-pointer">
+          <span>Explore Invesmart Commercial</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <a href="#projects-grid" class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-xs tracking-wider uppercase font-medium text-white border border-white/30 hover:border-blue-400 hover:bg-white/10 transition-all">
+          Browse All Projects ↓
+        </a>
+      </div>
+
+      <!-- 4 Key Numbers Micro-Bar (Quick facts visible immediately without scroll) -->
+      <div class="animate-hero-up-4 flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-4 text-[11px] sm:text-xs text-slate-200">
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">Invesmart</span> Grade-A IT Tower
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-emerald-400 font-bold">Palm Valley</span> Villa Plots
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">Teak Village</span> Eco Farmland
+        </div>
+        <div class="px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 flex items-center gap-1.5 font-medium">
+          <span class="text-blue-400 font-bold">Vistara</span> Highway Plots
+        </div>
+      </div>
+
+      <!-- Slide Indicator & 5s Timer Progress Bar (Moves up forward) -->
+      <div class="animate-hero-up-5 flex flex-col items-center gap-2 w-full max-w-md pt-1">
+        <!-- Live Slide Caption -->
+        <div id="hero-slide-caption" class="text-[10px] sm:text-[11px] tracking-wider uppercase text-blue-300 font-semibold hero-caption-animate flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+          <span id="caption-text">View 01 of 05 · Invesmart Commercial IT Tower · Financial District</span>
+        </div>
+
+        <!-- 5 Interactive 5s Progress Indicators -->
+        <div class="flex items-center gap-2 w-full justify-center">
+          <button onclick="changeHeroSlide(0)" class="slide-indicator-bar w-12 sm:w-16 active cursor-pointer group" aria-label="Slide 1">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(1)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 2">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(2)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 3">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(3)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 4">
+            <span class="slide-indicator-progress"></span>
+          </button>
+          <button onclick="changeHeroSlide(4)" class="slide-indicator-bar w-12 sm:w-16 cursor-pointer group" aria-label="Slide 5">
+            <span class="slide-indicator-progress"></span>
+          </button>
+        </div>
+
+        <!-- Micro Subtitle -->
+        <p class="text-[10px] sm:text-[11px] text-blue-200/60 max-w-xl mx-auto font-light leading-tight text-center pt-1">
+          Every project is backed by verified statutory documentation, approvals, and registered conveyancing.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Category Filter Tabs Section -->
+  <section class="py-6 bg-slate-100 border-b border-slate-200 sticky top-16 z-30 shadow-xs" id="projects-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 text-center">
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <button onclick="filterProjects('all', this)" class="project-tab active px-5 py-2 rounded-full text-xs uppercase tracking-wider font-bold border border-blue-600 bg-blue-600 text-white transition cursor-pointer shadow-xs">All Projects</button>
+        <button onclick="filterProjects('commercial', this)" class="project-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Commercial</button>
+        <button onclick="filterProjects('residential', this)" class="project-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Plotted & Residential</button>
+        <button onclick="filterProjects('farmland', this)" class="project-tab px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold border border-slate-300 bg-white text-slate-700 hover:border-blue-600 hover:text-blue-600 transition cursor-pointer">Managed Farmland</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Project 1: Invesmart (Commercial) -->
+        <div class="project-card commercial bg-slate-50 rounded-3xl overflow-hidden border border-blue-200 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1577495508048-b635879837f1?w=900&q=80" alt="Invesmart Commercial Tower" class="w-full h-full object-cover img-scale" />
+              <div class="absolute top-4 left-4 flex gap-2">
+                <span class="px-3 py-1 bg-blue-600 text-white text-[11px] font-bold uppercase rounded-full shadow-sm">Commercial · Flagship</span>
+                <span class="px-3 py-1 bg-white/95 text-slate-900 text-[11px] uppercase rounded-full font-semibold">IT Corridor</span>
+              </div>
+              <div class="absolute bottom-4 right-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl border border-slate-200 text-right shadow-sm">
+                <span class="text-[9px] uppercase text-slate-500 font-bold block">Entry Point</span>
+                <span class="text-base font-bold text-blue-700">From Rs 30 Lakhs*</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-serif text-slate-900 font-bold">Invesmart Commercial Tower</h3>
+              <p class="text-xs text-blue-600 uppercase tracking-wider font-semibold mt-1 mb-3">Grade-A Corporate Workspace · Hyderabad IT Growth Belt</p>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Modular and full-floor commercial office spaces engineered for tech firms and institutional tenants. Day 1 indicative rental yield structure starting at ~Rs 25,000/month*.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 pt-2 border-t border-slate-200 mb-6">
+                <div>• Indicative Rent: ~Rs 25,000/mo*</div>
+                <div>• Location: Near ORR & Financial Dist</div>
+                <div>• Approvals: TS RERA Compliant</div>
+                <div>• Power: 100% Dual DG Redundancy</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0 flex gap-3">
+            <a href="invesmart.html" class="flex-1 text-center py-3.5 rounded-full bg-blue-600 text-white text-xs uppercase tracking-wider font-bold hover:bg-blue-700 transition shadow-md shadow-blue-500/20">
+              Explore Invesmart →
+            </a>
+            <a href="index.html#breakdown-form-section" class="px-6 py-3.5 rounded-full border border-slate-300 text-slate-700 text-xs uppercase tracking-wider font-semibold hover:border-blue-600 hover:text-blue-600 transition">
+              Get Breakdown
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Palm Valley (Residential Plotted) -->
+        <div class="project-card residential bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Palm Valley Villa Plots" class="w-full h-full object-cover img-scale" />
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-blue-600 text-white text-[11px] font-bold uppercase rounded-full">Gated Villa Plots</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-serif text-slate-900 font-bold">Palm Valley</h3>
+              <p class="text-xs text-blue-600 uppercase tracking-wider font-semibold mt-1 mb-3">Luxury Plotted Gated Community · Greater Hyderabad</p>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Premium residential villa plots nestled amidst tranquil landscapes. Built with 40-ft and 30-ft blacktop roads, underground electricity cabling, landscaped parks, and clubhouse privileges.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 pt-2 border-t border-slate-200 mb-6">
+                <div>• Plot Sizes: 200 - 500 Sq. Yds</div>
+                <div>• Clear Titles & Immediate Registration</div>
+                <div>• Underground Utilities & Water</div>
+                <div>• Gated 24/7 Security & CCTV</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <a href="palm-valley.html" class="block w-full text-center py-3.5 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xs uppercase tracking-wider font-bold transition">
+              Explore Palm Valley Layout →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Teak Village (Farmland) -->
+        <div class="project-card farmland bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=900&q=80" alt="Teak Village Managed Farmland" class="w-full h-full object-cover img-scale" />
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-emerald-600 text-white text-[11px] font-bold uppercase rounded-full">Managed Farmland</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-serif text-slate-900 font-bold">Teak Village</h3>
+              <p class="text-xs text-emerald-600 uppercase tracking-wider font-semibold mt-1 mb-3">Eco-Luxury Agro Retreat & Teak Plantation</p>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                A sustainable agricultural asset combining high-yield commercial teakwood forestry with peaceful weekend agro-resort living and organic orchards.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 pt-2 border-t border-slate-200 mb-6">
+                <div>• Farmland units from 0.5 Acres</div>
+                <div>• Professionally managed plantation</div>
+                <div>• Weekend farmhouse cottage provision</div>
+                <div>• High capital appreciation timber asset</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <a href="teak-village.html" class="block w-full text-center py-3.5 rounded-full border border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white text-xs uppercase tracking-wider font-bold transition">
+              Explore Teak Village →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Vistara Valley (Plotted Highway) -->
+        <div class="project-card residential bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="relative h-72 sm:h-80 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Vistara Valley Highway Plots" class="w-full h-full object-cover img-scale" />
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-slate-900 text-white text-[11px] font-bold uppercase rounded-full">Highway Growth Corridor</span>
+              </div>
+            </div>
+
+            <div class="p-8">
+              <h3 class="text-3xl font-serif text-slate-900 font-bold">Vistara Valley</h3>
+              <p class="text-xs text-slate-700 uppercase tracking-wider font-semibold mt-1 mb-3">Strategic Plotted Layout · Rapid Growth Belt</p>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Carefully planned open residential plots along Greater Hyderabad's upcoming growth arteries, providing high liquidity and immediate appreciation.
+              </p>
+              <div class="grid grid-cols-2 gap-3 text-xs text-slate-700 pt-2 border-t border-slate-200 mb-6">
+                <div>• Direct Highway Proximity</div>
+                <div>• Layout with compound fencing</div>
+                <div>• Immediate Sub-Registrar registration</div>
+                <div>• High long-term resale demand</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 pt-0">
+            <a href="vistara-valley.html" class="block w-full text-center py-3.5 rounded-full border border-slate-800 text-slate-800 hover:bg-slate-900 hover:text-white text-xs uppercase tracking-wider font-bold transition">
+              Explore Vistara Valley →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 bg-[#0f172a] text-center text-xs text-slate-400 border-t border-slate-800">
+    <p>© 2026 Viseshta Group. Founded 2018 by Mr. Suman Babu Garaga. Hyderabad, Telangana.</p>
+  </footer>
+
+  <script>
+    function filterProjects(category, btn) {
+      document.querySelectorAll('.project-tab').forEach(t => {
+        t.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+        t.classList.add('bg-white', 'text-slate-700', 'border-slate-300');
+      });
+      btn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border-slate-300');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 5-Image Hero Slideshow (Every 5 Seconds)
+    const heroSlides = document.querySelectorAll('.hero-bg-slide');
+    const indicatorBars = document.querySelectorAll('.slide-indicator-bar');
+    const captionEl = document.getElementById('caption-text');
+    const heroCaptions = [
+      "View 01 of 05 · Invesmart Commercial IT Tower · Financial District",
+      "View 02 of 05 · Palm Valley · Luxury Plotted Community",
+      "View 03 of 05 · Teak Village · Managed Agro Farmland Retreat",
+      "View 04 of 05 · Vistara Valley · High-Growth Highway Plotted Layout",
+      "View 05 of 05 · Grade-A Pre-Leased Commercial Floor Plates"
+    ];
+
+    let currentHeroSlide = 0;
+    let heroSlideInterval = null;
+
+    function showHeroSlide(index) {
+      if (!heroSlides.length) return;
+      currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
+      
+      heroSlides.forEach((slide, i) => {
+        if (i === currentHeroSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      indicatorBars.forEach((bar, i) => {
+        if (i === currentHeroSlide) {
+          bar.classList.add('active');
+        } else {
+          bar.classList.remove('active');
+        }
+      });
+
+      if (captionEl) {
+        const captionWrapper = document.getElementById('hero-slide-caption');
+        if (captionWrapper) {
+          captionWrapper.classList.remove('hero-caption-animate');
+          void captionWrapper.offsetWidth;
+          captionWrapper.classList.add('hero-caption-animate');
+        }
+        captionEl.textContent = heroCaptions[currentHeroSlide];
+      }
+    }
+
+    function startHeroSlideshow() {
+      if (heroSlideInterval) clearInterval(heroSlideInterval);
+      heroSlideInterval = setInterval(() => {
+        showHeroSlide(currentHeroSlide + 1);
+      }, 5000);
+    }
+
+    function changeHeroSlide(index) {
+      showHeroSlide(index);
+      startHeroSlideshow();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      showHeroSlide(0);
+      startHeroSlideshow();
+    });
+  </script>
+  <script src="animations.js"></script>
+</body>
+</html>
